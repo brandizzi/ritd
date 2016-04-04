@@ -56,3 +56,32 @@ class TestDocument(unittest.TestCase):
                 </html>"""
             )
         )
+
+    def test_fill_class(self):
+        """
+        One can fill an element by class.
+        """
+        html = textwrap.dedent(
+            """\
+            <html>
+                <body>
+                    <div class="a" id="div1">test</div>
+                    <div class="b" id="div2">test</div>
+                </body>
+            </html>"""
+        )
+
+        doc = Document(html)
+        doc.fill(cssClass='a', value='REPLACEMENT')
+
+        self.assertEquals(
+            doc.tostring(),
+            textwrap.dedent("""\
+                <html>
+                    <body>
+                        <div class="a" id="div1">REPLACEMENT</div>
+                        <div class="b" id="div2">test</div>
+                    </body>
+                </html>"""
+            )
+        )
