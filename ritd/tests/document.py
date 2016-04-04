@@ -20,7 +20,7 @@
 import unittest
 import textwrap
 
-from ritd.doc import Document
+from ritd.document import Document
 
 
 class TestDocument(unittest.TestCase):

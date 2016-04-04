@@ -20,5 +20,5 @@
 from inelegant.finder import TestFinder
 
 load_tests = TestFinder(
-    'ritd.tests.doc'
+    'ritd.tests.document'
 ).load_tests
