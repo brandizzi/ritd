@@ -31,7 +31,7 @@ class Document(object):
             if eid:
                 self.id_map[eid] = e
 
-    def fill(self, value, id=None):
+    def fill(self, value, cssId=None):
         self.id_map[id].text = value
 
     def tostring(self):

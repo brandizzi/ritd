@@ -43,7 +43,7 @@ class TestDocument(unittest.TestCase):
         )
 
         doc = Document(html)
-        doc.fill(id='div1', value='REPLACEMENT')
+        doc.fill(cssId='div1', value='REPLACEMENT')
 
         self.assertEquals(
             doc.tostring(),
